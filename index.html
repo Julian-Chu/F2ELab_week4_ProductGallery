@@ -38,7 +38,10 @@
             .item2 {
                 grid-column: 6/ span 3;
                 grid-row: 3/ span 4;
-                background-color: blueviolet;
+                display: grid;
+                grid-template-columns: repeat(6, 1fr);
+                grid-template-rows: repeat(8, 1fr);
+                border: none;
             }
             
             .item3 {
@@ -83,12 +86,12 @@
             
             .title3 {
                 font-size: 24px;
-                font-family: 'Roboto Bold italic';
+                font-family: 'Roboto-BoldItalic';
             }
             
             .subtitle1 {
                 font-size: 24px;
-                font-family: 'Roboto Black';
+                font-family: 'Roboto-Black';
             }
             
             .paragraph {
@@ -98,7 +101,7 @@
             
             .logo {
                 font-size: 20px;
-                font-family: 'Roboto Black';
+                font-family: 'Roboto-Black';
             }
             
             .subtitle {
@@ -154,29 +157,6 @@
                 text-shadow: #000000;
             }
             
-            .item1 .photo-name b::before {
-                position: absolute;
-                opacity: 0.5;
-                top: -15px;
-                width: 100%;
-                height: 50%;
-                overflow: hidden;
-                content: attr(title);
-                font-size: inherit;
-            }
-            
-            .item1 .photo-name b::after {
-                position: absolute;
-                opacity: 0.2;
-                top: -20px;
-                left: 0;
-                width: 100%;
-                height: 50%;
-                overflow: hidden;
-                content: attr(title);
-                font-size: inherit;
-            }
-            
             .back-square {
                 position: absolute;
                 border: 20px solid #50E3C2;
@@ -193,6 +173,97 @@
                 position: absolute;
                 left: 420px;
                 bottom: 120px;
+            }
+            
+            .item2>.block1 {
+                grid-column: 3/span 4;
+                grid-row: 1/ span 4;
+                border: 20px solid #50E3C2
+            }
+            
+            .item2>.block2 {
+                grid-column: 2 / span 4;
+                grid-row: 2 /span 4;
+                background: #50E3C2;
+            }
+            
+            .item2>.block3 {
+                grid-column: 1 / span 4;
+                grid-row: 3/ span 4;
+                width: 240px;
+                height: 200px;
+                overflow: hidden;
+                /* position: absolute; */
+                /* bottom: 100px; */
+                z-index: 2;
+                position: relative;
+            }
+            
+            .item2>.block3 img {
+                max-width: 100%;
+                width: auto;
+                height: auto;
+                position: absolute;
+                transform: translateY(-80px);
+            }
+            
+            .item2>.block-itemNo {
+                grid-column: 6/span 1;
+                grid-row: 1/span 1;
+                z-index: 3;
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-start;
+            }
+            
+            .item2>.block-itemTitle {
+                grid-column: 3 / span 2;
+                grid-row: 7 /span 2;
+            }
+            
+            .item2 .block-itemTitle {
+                position: relative;
+                z-index: 3;
+                grid-column: 3 /span 4;
+                grid-row: span 1;
+                transform: translateY(25px);
+            }
+            
+            .item-title {
+                width: 100%;
+                height: 100%;
+            }
+            
+            .item-title::before {
+                position: absolute;
+                opacity: 0.5;
+                top: -15px;
+                width: 100%;
+                height: 50%;
+                overflow: hidden;
+                content: attr(title);
+                font-size: inherit;
+            }
+            
+            .item-title::after {
+                position: absolute;
+                opacity: 0.2;
+                top: -20px;
+                left: 0;
+                width: 100%;
+                height: 50%;
+                overflow: hidden;
+                content: attr(title);
+                font-size: inherit;
+            }
+            
+            .item2 .category {
+                grid-column: 1/span 5;
+                grid-row: 2/span 1;
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-end;
+                transform: translateX(-15px);
             }
         </style>
     </head>
@@ -214,12 +285,21 @@
                     <img src="https://images.unsplash.com/photo-1513827379601-9dba5099a3f9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1acdd78f34ee75aade9e313251bb1695&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgbhttps://unsplash.com/photos/seTr2ZmQDcM"></img>
                 </div>
                 <div class="photo-name">
-                    <b class="title2 " title="LINEN BLAZER">LINEN BLAZER</b>
+                    <b class="title2 item-title" title="LINEN BLAZER">LINEN BLAZER</b>
                 </div>
                 <div class="back-square"></div>
                 <div class="style-name"><b class="title3">Men's outfit</b></div>
             </div>
-            <div class="item item2">02</div>
+            <div class="item item2">
+                <b class="title2 block-itemNo">02</b>
+                <div class="block1"></div>
+                <div class="block2"></div>
+                <div class="block3">
+                    <img src="https://images.unsplash.com/photo-1514632542677-48fae74a01b2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=cf412aceb1d689765e387d30fca7210a&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb" alt="">
+                </div>
+                <div class="block-itemTitle"><b class="title2 item-title" title="FREELIFT">FREELIFT</b></div>
+                <b class="category title3">Men's basics</b>
+            </div>
             <div class="item item3">03</div>
             <div class="item item4">04</div>
             <div class="item item5">05</div>
