@@ -25,13 +25,14 @@
             .item-title {
                 grid-column: 3/ span 4;
                 grid-row: span 1;
-                background-color: aqua;
+                border: none;
             }
             
             .item1 {
+                border: none;
                 grid-column: 1/ span 5;
                 grid-row: 2/ span 6;
-                background-color: brown;
+                position: relative;
             }
             
             .item2 {
@@ -85,7 +86,7 @@
                 font-family: 'Roboto Bold italic';
             }
             
-            .subtitle {
+            .subtitle1 {
                 font-size: 24px;
                 font-family: 'Roboto Black';
             }
@@ -99,16 +100,125 @@
                 font-size: 20px;
                 font-family: 'Roboto Black';
             }
+            
+            .subtitle {
+                background-color: #000000;
+                color: #FFFFFF;
+                text-align: center;
+            }
+            
+            .title {
+                text-align: center;
+            }
+            
+            .front-pattern {
+                background-image: url('./assets/pattern_unit.png');
+                width: 240px;
+                height: 100px;
+            }
+            
+            .item1>b {
+                left: 0px;
+                bottom: 50px;
+                position: absolute;
+            }
+            
+            .item1 .front-pattern {
+                bottom: 50px;
+                left: 60px;
+                position: absolute;
+                z-index: 3;
+            }
+            
+            .item .photo {
+                width: 480px;
+                height: 400px;
+                overflow: hidden;
+                position: absolute;
+                bottom: 100px;
+                z-index: 2;
+            }
+            
+            .item1 .photo img {
+                transform: translateY(-160px);
+                max-width: 100%;
+                /* max-height: 100%; */
+                width: auto;
+                height: auto;
+            }
+            
+            .item1 .photo-name {
+                position: absolute;
+                top: 75px;
+                z-index: 3;
+                text-shadow: #000000;
+            }
+            
+            .item1 .photo-name b::before {
+                position: absolute;
+                opacity: 0.5;
+                top: -15px;
+                width: 100%;
+                height: 50%;
+                overflow: hidden;
+                content: attr(title);
+                font-size: inherit;
+            }
+            
+            .item1 .photo-name b::after {
+                position: absolute;
+                opacity: 0.2;
+                top: -20px;
+                left: 0;
+                width: 100%;
+                height: 50%;
+                overflow: hidden;
+                content: attr(title);
+                font-size: inherit;
+            }
+            
+            .back-square {
+                position: absolute;
+                border: 20px solid #50E3C2;
+                width: 240px;
+                height: 200px;
+                right: 60px;
+                top: 50px;
+            }
+            
+            .style-name {
+                transform: rotateZ(90deg);
+                width: 150px;
+                height: 28px;
+                position: absolute;
+                left: 420px;
+                bottom: 120px;
+            }
         </style>
     </head>
 
     <body>
         <div class="container">
             <div class="item item-title">
-
+                <div class="logo subtitle">CCCLOTHS</div>
+                <div class="title1 title"><b>
+                    MEN'S TOPS
+                </b>
+                </div>
 
             </div>
-            <div class="item item1">01</div>
+            <div class="item item1">
+                <b class="title2">01</b>
+                <div class="front-pattern"></div>
+                <div class="photo">
+                    <img src="https://images.unsplash.com/photo-1513827379601-9dba5099a3f9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1acdd78f34ee75aade9e313251bb1695&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgbhttps://unsplash.com/photos/seTr2ZmQDcM"></img>
+                </div>
+                <div class="photo-name">
+                    <b class="title2 " title="LINEN BLAZER">LINEN BLAZER</b>
+                </div>
+                <div class="back-square"></div>
+                <div class="style-name"><b class="title3">Men's outfit</b></div>
+            </div>
             <div class="item item2">02</div>
             <div class="item item3">03</div>
             <div class="item item4">04</div>
