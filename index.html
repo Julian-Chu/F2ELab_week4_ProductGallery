@@ -5,9 +5,11 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Document</title>
+        <title>Men's Tops</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         <style>
             body {
+                margin: auto;
                 width: 960px;
                 height: 2000px;
             }
@@ -53,25 +55,24 @@
                 border: none;
             }
             
-            .item7 {
-                grid-column: 1/ span 3;
-                grid-row: 16/span 5;
-                background-color: darkgoldenrod;
-            }
-            
             .title1 {
                 font-size: 72px;
-                font-family: 'Roboto Black';
+                font-family: 'Roboto';
+                color: #000000;
             }
             
             .title2 {
                 font-size: 48px;
-                font-family: 'Roboto Black';
+                font-family: 'Roboto';
+                color: #000000;
             }
             
             .title3 {
                 font-size: 24px;
-                font-family: 'Roboto-BoldItalic';
+                font-family: 'Roboto';
+                color: #000000;
+                font-style: italic;
+                font-weight: bold;
             }
             
             .subtitle1 {
@@ -221,7 +222,7 @@
             
             b.item-title::before {
                 position: absolute;
-                opacity: 0.5;
+                opacity: 0.4;
                 top: -15px;
                 width: 100%;
                 height: 50%;
@@ -233,7 +234,7 @@
             b.item-title::after {
                 position: absolute;
                 opacity: 0.2;
-                top: -20px;
+                top: -25px;
                 left: 0;
                 width: 100%;
                 height: 50%;
@@ -310,7 +311,7 @@
             
             .item4 {
                 grid-column: 6/ span 3;
-                grid-row: 7/ span 7;
+                grid-row: 8/ span 7;
                 display: grid;
                 grid-template-columns: repeat(6, 60px);
                 grid-template-rows: repeat(12, 50px);
@@ -380,6 +381,7 @@
                 display: grid;
                 grid-template-columns: repeat(8, 60px);
                 grid-template-rows: repeat(8, 50px);
+                border: none;
             }
             
             .item5 .block1 {
@@ -492,12 +494,14 @@
             }
             
             .item6 .category {
-                grid-column: 5 / -1;
-                width: 150%;
+                grid-column: 5 / span 4;
+                width: 100%;
                 grid-row: 11/span 1;
                 display: flex;
                 justify-content: flex-start;
                 transform: translate(5px, 0px);
+                /* text-align: center; */
+                justify-content: center;
             }
             
             .item6>.block-itemNo {
@@ -508,13 +512,84 @@
                 justify-content: flex-end;
                 align-items: flex-start;
             }
+            
+            .item7 {
+                grid-column: 1/ span 3;
+                grid-row: 16/span 5;
+                display: grid;
+                grid-template-columns: repeat(6, 60px);
+                grid-template-rows: repeat(10, 50px);
+                border: none;
+            }
+            
+            .item7 .block1 {
+                border: 20px solid #50E3C2;
+                grid-column: 2/ span 4;
+                grid-row: 2 /span 6;
+            }
+            
+            .item7 .block2 {
+                grid-column: 5/span 2;
+                grid-row: 7 /span 4;
+                z-index: 3;
+                background: #50e3C2;
+            }
+            
+            .item7 .block3 {
+                grid-column: 1 /span 4;
+                grid-row: 3/ span 8;
+                /* width: 480px; */
+                /* height: 200px; */
+                overflow: hidden;
+                /* position: absolute; */
+                /* bottom: 100px; */
+                z-index: 2;
+                position: relative;
+            }
+            
+            .item7 .block3 img {
+                /* max-width: 100%; */
+                max-height: 100%;
+                width: auto;
+                height: auto;
+                position: absolute;
+                /* transform: translateY(-60px); */
+            }
+            
+            .item7 .block-itemTitle {
+                position: relative;
+                z-index: 3;
+                grid-column: 4 / -1;
+                grid-row: 3 / span 1;
+                width: 180%;
+                transform: rotateZ(90deg) translate(130px, 75px);
+            }
+            
+            .item7 .category {
+                grid-column: 1 / span 3;
+                width: 180%;
+                grid-row: 2/span 1;
+                display: flex;
+                justify-content: flex-start;
+                transform: translate(0px, 20px);
+            }
+            
+            .item7>.block-itemNo {
+                grid-column: 6 /span 1;
+                grid-row: 10 /span 1;
+                z-index: 3;
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-start;
+                z-index: 4;
+            }
         </style>
     </head>
 
     <body>
         <div class="container">
             <div class="item item-title">
-                <div class="logo subtitle">CCCLOTHS</div>
+                <div class="logo subtitle">CCCLOTHES</div>
                 <div class="title1 title"><b>
                     MEN'S TOPS
                 </b>
@@ -575,7 +650,6 @@
 
             </div>
             <div class="item item6">
-
                 <b class="title2 block-itemNo">06</b>
                 <div class="block1"></div>
                 <div class="block2"></div>
@@ -583,11 +657,18 @@
                     <img src="https://images.unsplash.com/photo-1484516758160-69878111a911?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=39466d66952b133d5a5cff642b970d05&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb" alt="">
                 </div>
                 <div class="block-itemTitle"><b class="title2 item-title" title="VINTAGE DENIM">VINTAGE DENIM</b></div>
-                <b class="category title3">Men's classic</b>
-
-
+                <b class="category title3"><i>Men's classic</i></b>
             </div>
-            <div class="item item7">07</div>
+            <div class="item item7">
+                <b class="title2 block-itemNo">07</b>
+                <div class="block1"></div>
+                <div class="block2"></div>
+                <div class="block3">
+                    <img src="https://images.unsplash.com/photo-1484516758160-69878111a911?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=39466d66952b133d5a5cff642b970d05&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb" alt="">
+                </div>
+                <div class="block-itemTitle"><b class="title2 item-title" title="EDITION">EDITION</b></div>
+                <b class="category title3">Men's shirts</b>
+            </div>
         </div>
     </body>
 
