@@ -53,12 +53,6 @@
                 border: none;
             }
             
-            .item6 {
-                grid-column: 4/ -1;
-                grid-row: 14/span 6;
-                background-color: darkgreen;
-            }
-            
             .item7 {
                 grid-column: 1/ span 3;
                 grid-row: 16/span 5;
@@ -384,7 +378,7 @@
                 grid-column: 1/ span 4;
                 grid-row: 12/ span 4;
                 display: grid;
-                grid-template-columns: repeat(10, 60px);
+                grid-template-columns: repeat(8, 60px);
                 grid-template-rows: repeat(8, 50px);
             }
             
@@ -439,6 +433,75 @@
             
             .item5>.block-itemNo {
                 grid-column: 3/span 1;
+                grid-row: 6 /span 1;
+                z-index: 3;
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-start;
+            }
+            
+            .item6 {
+                grid-column: 4/ -1;
+                grid-row: 14/span 6;
+                display: grid;
+                grid-template-columns: repeat(10, 60px);
+                grid-template-rows: repeat(12, 50px);
+                border: none;
+            }
+            
+            .item6 .block1 {
+                border: 20px solid #50E3C2;
+                grid-column: 3/ -1;
+                grid-row: 10 /span 2;
+            }
+            
+            .item6 .block2 {
+                grid-column: 2/span 1;
+                grid-row: 7 /span 4;
+                z-index: 3;
+                background: #50e3C2;
+            }
+            
+            .item6 .block3 {
+                grid-column: 3 /span 8;
+                grid-row: 3/ span 8;
+                /* width: 480px; */
+                /* height: 200px; */
+                overflow: hidden;
+                /* position: absolute; */
+                /* bottom: 100px; */
+                z-index: 2;
+                position: relative;
+            }
+            
+            .item6 .block3 img {
+                max-width: 100%;
+                /* max-height: 100%; */
+                width: auto;
+                height: auto;
+                position: absolute;
+                /* transform: translateY(-60px); */
+            }
+            
+            .item6 .block-itemTitle {
+                position: relative;
+                z-index: 3;
+                grid-column: 4 / -1;
+                grid-row: 2 / span 1;
+                width: 150%;
+            }
+            
+            .item6 .category {
+                grid-column: 5 / -1;
+                width: 150%;
+                grid-row: 11/span 1;
+                display: flex;
+                justify-content: flex-start;
+                transform: translate(5px, 0px);
+            }
+            
+            .item6>.block-itemNo {
+                grid-column: 2/span 1;
                 grid-row: 6 /span 1;
                 z-index: 3;
                 display: flex;
@@ -511,7 +574,19 @@
                 <b class="category title3">Men's jacket</b>
 
             </div>
-            <div class="item item6">06</div>
+            <div class="item item6">
+
+                <b class="title2 block-itemNo">06</b>
+                <div class="block1"></div>
+                <div class="block2"></div>
+                <div class="block3">
+                    <img src="https://images.unsplash.com/photo-1484516758160-69878111a911?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=39466d66952b133d5a5cff642b970d05&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb" alt="">
+                </div>
+                <div class="block-itemTitle"><b class="title2 item-title" title="VINTAGE DENIM">VINTAGE DENIM</b></div>
+                <b class="category title3">Men's classic</b>
+
+
+            </div>
             <div class="item item7">07</div>
         </div>
     </body>
