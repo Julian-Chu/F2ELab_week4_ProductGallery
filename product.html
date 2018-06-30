@@ -2,145 +2,258 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-  <title>Document</title>
-  <style>
-    body {
-      margin: auto;
-      width: 960px;
-      height: 2000px;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        body {
+            margin: auto;
+            width: 960px;
+            height: 2000px;
+        }
 
-    .container {
-      display: grid;
-      /* grid-template-columns: repeat(8, 120px); */
-      grid-template-rows: 700px 600px 700px;
-    }
+        .container {
+            display: grid;
+            /* grid-template-columns: repeat(8, 120px); */
+            grid-template-rows: 700px 600px 700px;
+        }
 
-    .title2 {
-      font-size: 48px;
-      font-family: 'Roboto';
-      color: #000000;
-      font-weight: bold;
-    }
+        .title2 {
+            font-size: 48px;
+            font-family: 'Roboto';
+            color: #000000;
+            font-weight: bold;
+        }
 
-    .item1 {
-      grid-row: 1 / span 1;
-      /* background-color: aqua; */
-      display: grid;
-      grid-template-columns: repeat(16, 60px);
-      grid-template-rows: repeat(14, 50px);
-    }
+        .item1 {
+            grid-row: 1 / span 1;
+            /* background-color: aqua; */
+            display: grid;
+            grid-template-columns: repeat(16, 60px);
+            grid-template-rows: repeat(14, 50px);
+        }
 
-    .item1 .logo {
-      grid-column: 3 / span 3;
-      grid-row: 2 / span 1;
-      display: inline-block;
-      transform: translateX(-20px);
-    }
+        .item1 .logo {
+            grid-column: 3 / span 3;
+            grid-row: 2 / span 1;
+            display: inline-block;
+            transform: translateX(-20px);
+        }
 
+        .item1 .logo>a {
+            text-decoration: none;
+            display: inline-block;
+            width: auto;
+            color: #FFFFFF;
+            background-color: #000000;
+            padding: 5px;
+        }
 
+        .item1 .block {
+            grid-column: 2 / span 4;
+            grid-row: 4 / span 4;
+            background: #50E3C3;
+        }
 
-    .item1 .logo>b {
-      display: inline-block;
-      width: auto;
-      color: #FFFFFF;
-      background-color: #000000;
-      padding: 5px;
-    }
+        .item1 .border {
+            border: 20px solid #50E3C3;
+            grid-column: 8 /span 8;
+            grid-row: 10 / span 4;
+        }
 
-    .item1 .block {
-      grid-column: 2 / span 4;
-      grid-row: 4 / span 4;
-      background: #50E3C3;
-    }
+        .item1 .image {
+            grid-column: 3 / span 12;
+            grid-row: 5 / span 8;
+            overflow: hidden;
+            position: relative;
+        }
 
-    .item1 .border {
-      border: 20px solid #50E3C3;
-      grid-column: 8 /span 8;
-      grid-row: 10 / span 4;
-    }
+        .image img {
+            position: absolute;
+            max-width: 100%;
+            /* max-height: 100%; */
+            width: auto;
+            height: auto;
+            transform: translateY(-350px);
+        }
 
-    .item1 .image {
-      grid-column: 3 / span 12;
-      grid-row: 5 / span 8;
-      overflow: hidden;
-      position: relative;
-    }
+        .item1 .top {
+            grid-column: 3 / span 1;
+            grid-row: 13 / span 1;
+            transform: rotateZ(180deg) translateX(-35px);
+        }
 
-    .image img {
-      position: absolute;
-      max-width: 100%;
-      /* max-height: 100%; */
-      width: auto;
-      height: auto;
-      transform: translateY(-350px);
-    }
+        .item1 .itemNo {
+            grid-column: 2 /span 1;
+            grid-row: 12 / span 1;
+            transform: rotateZ(-90deg);
+        }
 
-    .item1 .top {
-      grid-column: 3 / span 1;
-      grid-row: 13 / span 1;
-      transform: rotateZ(180deg) translateX(-35px);
-    }
+        .item1 .item-title1 {
+            grid-column: 11 / span 1;
+            grid-row: 4 /span 1;
+            transform: translateX(30px);
+        }
 
-    .item1 .itemNo {
-      grid-column: 2 /span 1;
-      grid-row: 12 / span 1;
-      transform: rotateZ(-90deg);
-    }
+        .item1 .item-title2 {
+            grid-column: 15 / span 1;
+            grid-row: 5 /span 1;
+            transform: rotateZ(90deg)
+        }
 
-    .item1 .item-title1 {
-      grid-column: 11 / span 1;
-      grid-row: 4 /span 1;
-      transform: translateX(30px);
-    }
+        .item2 {
+            grid-row: 2 / span 1;
+            background-color: brown;
+            display: grid;
+            grid-template-columns: repeat(8, 120px);
+            grid-template-rows: repeat(6, 100px);
+        }
 
-    .item1 .item-title2 {
-      grid-column: 15 / span 1;
-      grid-row: 5 /span 1;
-      transform: rotateZ(90deg)
-    }
+        .subtitle1 {
+            font-size: 24px;
+            font-family: 'Roboto';
+            color: #000000;
 
-    .item2 {
-      grid-row: 2 / span 1;
-      background-color: brown;
-    }
+        }
 
-    .item3 {
-      grid-row: 3/ span 1;
-      background-color: chartreuse;
-    }
+        .item2 .block1 {
+            grid-column: 2 / span 2;
+            grid-row: 2/ span 3;
+            position: absolute;
+            transform: rotateZ(90deg) translate(200px, -30px);
+        }
 
-  </style>
+        .item2 .block2 {
+            grid-column: 3 / span 5;
+            grid-row: 2 /span 1;
+        }
+
+        .item2 .block3 {
+            grid-column: 3 / span 5;
+            grid-row: 3 /span 3;
+        }
+
+        .paragraph {
+            font-size: 16px;
+            font-family: 'Roboto';
+        }
+
+        .subtitle1 {
+            font-size: 24px;
+            font-family: 'Roboto';
+            color: #000000;
+        }
+
+        .item3 {
+            grid-row: 3/ span 1;
+            background-color: chartreuse;
+            display: grid;
+            grid-template-columns: repeat(16, 60px);
+            grid-template-rows: repeat(14, 50px);
+        }
+
+        .border {
+            grid-column: 2 / span 8;
+            grid-row: 4 / span 4;
+            border: 20px solid #50E3C3;
+        }
+
+        .rectangle {
+            grid-column: 12 / span 4;
+            grid-row: 3 / span 4;
+            background-color: #50E3C3;
+        }
+
+        .pattern {
+            background-image: url('./assets/pattern_unit.png');
+            width: 240px;
+            height: 100px;
+            grid-column: 4 / span 4;
+            grid-row: 12 / span 2;
+            z-index: 2;
+        }
+
+        .item3 .block1 {
+            grid-column: 3 / span 6;
+            grid-row: 1 / span 6;
+            overflow: hidden;
+            z-index: 2;
+        }
+
+        .item3 .block1 img {
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translateX(-30px);
+        }
+
+        .item3 .block2 {
+            grid-column: 7 /span 8;
+            grid-row: 5 / span 8;
+            overflow: hidden;
+        }
+
+        .item3 .block2 img {
+            max-width: 100%;
+            /* max-height: 100%; */
+            width: auto;
+            height: auto;
+            transform: translateY(-150px);
+
+        }
+
+    </style>
 </head>
 
 <body>
-  <div class="container">
-    <div class="item item1">
-      <div class="logo">
-        <i class="fas fa-arrow-left"></i>
-        <b>CCCLOTHES</b>
-      </div>
-      <div class="block"></div>
-      <div class="border"></div>
-      <div class="image">
-        <img src="https://images.unsplash.com/photo-1519406709381-c1f293304b28?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=98c497a29f229085d9574ee8b6eeef8c&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb" alt="">
-      </div>
-      <div class="itemNo title2">06</div>
-      <div class="prefix-top"></div>
-      <div class="item-title1 title2">VINTAGE</div>
-      <div class="item-title2 title2">DENIM</div>
-      <div class="top title2">TOP </div>
+    <div class="container">
+        <div class="item item1">
+            <div class="logo">
+                <i class="fas fa-arrow-left"></i>
+                <a href="./index.html">CCCLOTHES</a>
+            </div>
+            <div class="block"></div>
+            <div class="border"></div>
+            <div class="image">
+                <img src="https://images.unsplash.com/photo-1519406709381-c1f293304b28?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=98c497a29f229085d9574ee8b6eeef8c&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb" alt="">
+            </div>
+            <div class="itemNo title2">06</div>
+            <div class="prefix-top"></div>
+            <div class="item-title1 title2">VINTAGE</div>
+            <div class="item-title2 title2">DENIM</div>
+            <div class="top title2">TOP </div>
 
+        </div>
+
+        <div class="item item2">
+            <div class="block1 subtitle1">PRODUCT DETAILS</div>
+            <div class="block2">
+                <div class="main-title title2">VINTAGE DENIM</div>
+                <div class="subtitle subtitle1">Kogi Cosby sweater ethical squid irony</div>
+            </div>
+            <div class="block3">
+                <div class="desc paragraph">In the tumultuous business of cutting-in and attending to a whale, there is much running backwards and forwards among the crew. Now hands are wanted here, and then again hands are wanted there. There is no staying in any one place; for at one and the same time everything has to be done everywhere. It is much the same with him who endeavors the description of the scene.
+                    <br/>
+                    <br/>
+                    <br/> We must now retrace our way a little. It was mentioned that upon first breaking ground in the whale 's back, the blubber-hook was inserted into the original hole there cut by the spades of the mates. But how did so clumsy and weighty a mass as that same hook get fixed in that hole? It was inserted there by my particular friend Queequeg, whose duty it was, as harpooneer.</div>
+            </div>
+
+        </div>
+        <div class="item item3">
+            <div class="pattern"></div>
+            <div class="border"></div>
+            <div class="rectangle"></div>
+            <div class="block1">
+                <img src="https://images.unsplash.com/photo-1519406686401-e9ef2420c15b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f48976340279ffce098f21bb046acc87&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb" alt="">
+            </div>
+            <div class="block2">
+                <img src="https://images.unsplash.com/photo-1519406728390-b536d7be138f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=787976dcde91781727f476692b203ee9&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb" alt="">
+            </div>
+        </div>
     </div>
-
-    <div class="item item2"></div>
-    <div class="item item3"></div>
-  </div>
 </body>
 
 </html>
